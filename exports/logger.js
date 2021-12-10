@@ -4,10 +4,14 @@ let types = {
     info: "[INFO]"
 }
 
+const logTypes = Object.freeze({
+    INFO: "[BaldBot - INFO]",
+    WARN: "[Bald Bot - WARNING]",
+    ERROR: "[Bald Bot - ERROR]"
+});
+
+exports.LogTypes = logTypes; 
+
 exports.Log = function(type, log) {
-    if(!types[type]) {
-        console.log(`${types['info']} ${log}`);
-    } else {
-        console.log(`${types[type]} ${log}`);
-    }
+    console.log(`${type} ${log}`);
 }
