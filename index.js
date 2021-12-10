@@ -155,7 +155,7 @@ client.on('messageCreate', msg => {
 		let argtxt = args.join(" ");
 
 		if(args.length == 0) argtxt = "<NONE>"
-		Log(LogTypes.ERROR, msg.member.user.username + " attempted to run command " + cmd + " with args " + argtxt);
+		Log(LogTypes.INFO, msg.member.user.username + " attempted to run command " + cmd + " with args " + argtxt);
 
 		if(cmdobj.permission == 0){
 			if(args.length < cmdobj.reqargs){

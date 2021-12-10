@@ -56,7 +56,8 @@ module.exports = {
                     We hope to see you on the server!`},
                     {name: "Server IP: ", value: "mc.baldgaming.net", inline: true},
                     {name: "Discord Invite", value: "https://discord.gg/2rVqmjYNTr", inline: true},
-                    {name: "Server Manager", value: "<@790395920185163777>", inline: true},  
+                    {name: "Server Manager", value: "<@790395920185163777>", inline: true},
+                    {name: "Player Shops Tutorial", value: "https://cdn.discordapp.com/attachments/918254768038739988/918861899502858290/unknown.png", inline:true}
                 )
                 .setTimestamp()
                 .setFooter(`Executed by ${message.member.displayName}`, message.member.user.avatarURL())
