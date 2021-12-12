@@ -63,8 +63,28 @@ module.exports = {
                 .setFooter(`Executed by ${message.member.displayName}`, message.member.user.avatarURL())
 
             channel.send({embeds: [minecraftInfo]});
+        } else if(args[0]== "discord_rules") {
+            const rules = new MessageEmbed()
+                .setColor("#0099ff")
+                .setTitle("Bald Gaming Discord Rules")
+                .setThumbnail("https://cdn.discordapp.com/attachments/294374142445223936/918852317690884176/V3JLlo5w_400x400.png")
+                .setDescription("We'd really appreciate if you followed these rules. Don't be a shitter, and everyone will get along just fine.\nWhile we really don't limit the kind of language you can use, try to use your brain and don't write shit that you know will cause drama.")
+                .addFields(
+                    {name: "General Rules", value: `**1.** Don't be a shitter.
+                    **2.** Spamming is a no go.
+                    **3.** Unsolicited DMs aren't tolerated, specifically advertisements.
+                    **4.** Drama is retarded. Firestarting will just result in your ass being banned.
+                    **5.** If a staff member tells you to stop acting a fool, don't argue, just stop.
+                    **6.** Harmful links, such as phishing sites, are very much a no go.
+                    **7.** Your account is your responsibility. *if your account gets compromised, it is your fault. Any punishment given to a compromised account will remain.*`}
+                )
+
+            channel.send({embeds: [rules]});
+
         } else {
             message.reply("Invalid page.");
         }
+
+        message.delete();
     }
 }
